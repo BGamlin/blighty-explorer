@@ -187,7 +187,7 @@ function bex_folder( $atts ) {
 			$out .= '<div class="bex-row-' .$i .'">';
 
 			if ($file->is_dir) {
-				$out .= '<div class="bex-cell"><img class="bex-img" src="' .plugins_url( 'icons/folder.png', __FILE__ ) .'" />&nbsp;';
+				$out .= '<div class="bex-cell folder"><img class="bex-img" src="' .plugins_url( 'icons/folder.png', __FILE__ ) .'" />&nbsp;';
 				$out .= '<a href="' .$thisQS .'folder=' .$filePath .'&sortdir=' .$sortDir .'">' .$filePathWorking ."</a></div>";
 				if (get_option('bex_show_moddate')) {
 					$out .= '<div class="bex-cell-r">&nbsp;</div>';
@@ -201,7 +201,7 @@ function bex_folder( $atts ) {
 					$icon = $mapIcons[$icon];
 				}
 
-				$out .= '<div class="bex-cell"><img class="bex-img" src="' .plugins_url( 'icons/'. $icon .'.png', __FILE__ ) .'" />&nbsp;';
+				$out .= '<div class="bex-cell '.$icon.'"><img class="bex-img" src="' .plugins_url( 'icons/'. $icon .'.png', __FILE__ ) .'" />&nbsp;';
 //				$out .= '<a href="' .$thisQS .'folder=' .$folder . '&file=' .$filePath .'&sortdir=' .$sortDir .'">' .$filePathWorking ."</a></div>";
 				$out .= '<a href="' .$thisQS .'file=' .$filePath .'">' .$filePathWorking ."</a></div>";
 				if (get_option('bex_show_moddate')) {
